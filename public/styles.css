@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 25px 0px 25px 0px;
+    background-color: #00B4A0
+}
+
+html {
+    font-size: 16px;
+}
+
+div {
+    word-wrap: break-word;
+    line-height: 1.25rem;
+}
+
+.chat-column {
+    height: 100%;
+    padding: 0.375rem 0 0.925rem 0;
+    margin: auto;
+    text-align: left;
+    max-width: 25rem;
+    min-width: 9.375rem;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 36px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 36px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 36px -8px rgba(0,0,0,0.75);
+}
+
+#chat {
+    margin: 0.75rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80vh;
+}
+
+.message-inner {
+    opacity: 0;
+    opacity: 1;
+    margin-top: 0.9375rem;
+}
+
+.from-user {
+    text-align: right;
+}
+
+.from-user p:after {
+    content: "";
+    background: #00B4A0;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    right: 0.4375rem;
+    width: 0.3125rem;
+    height: 1.3125rem;
+    line-height: 1.3125rem;
+}
+
+.from-user .message-inner {
+    position: relative;
+    font-size: 1rem;
+    color: #000;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+    background: #fff;
+    border-radius: 1.25rem;
+    border-bottom-right-radius: 0;
+    text-align: left;
+    display: inline-block;
+    margin-left: 2.5rem;
+    min-width: 2.5rem;
+}
+
+.from-user .message-inner p {
+    margin: 0.3125rem;
+    padding: 0 0.9375rem;
+}
+
+.from-user .message-inner:before, .from-user .message-inner:after {
+    content: "";
+    position: absolute;
+}
+
+
+
+.from-user .message-inner:after {
+    z-index: -1;
+    bottom: -0.5rem;
+    right: 0;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: #fff;
+    border-top-right-radius: 1.25rem;
+}
+
+.from-watson .message-inner {
+    position: relative;
+    border-radius: 1.5625rem;
+    font-size: 1rem;
+    color: #323232;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+}
+
+.from-watson p {
+    margin: 0.3125rem;
+    padding: 0 1.25rem;
+}
+
+.from-watson p:before {
+    content: "";
+    background: #9855D4;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    left: 0.4375rem;
+    width: 0.3125rem;
+    height: 1.3125rem;
+    line-height: 1.3125rem;
+}
+
+#textInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #323232;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+    height: 2.5rem;
+    width: 100%;
+    padding-left: 0.125rem;
+    margin-bottom: -0.325rem;
+    overflow: auto;
+}
+
+.inputOutline {
+    display: block;
+    border-bottom: 0.0625rem solid #aeaeae;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem
+}
+
+.typing {
+    width: 3rem;
+    height: 2.2rem;
+    display: none
+}
+
+#typing {
+    width: 3rem;
+    height: 2.2rem;
+    margin-top: -1.4rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+   
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fafafa; 
+    border-radius: 25px
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f1f1f1; 
+    border-radius: 25px
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
