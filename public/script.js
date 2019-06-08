@@ -36,9 +36,15 @@ const getWatsonMessageAndInsertTemplate = async (text = '') => {
 
   context = response.context;
 
-  const template = templateChatMessage(response.output.text, 'watson');
+  console.log(response)
   
-  InsertTemplateInTheChat(template);
+  response.output.text.map((item, index) => {
+    const template = templateChatMessage(item, 'watson');
+  
+    InsertTemplateInTheChat(template);
+  })
+
+  
   document.getElementById("animation").style.display = "none";
 };
 
