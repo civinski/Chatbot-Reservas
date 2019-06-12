@@ -23,7 +23,8 @@ const InsertTemplateInTheChat = (template) => {
 // Calling server and get the watson output
 const getWatsonMessageAndInsertTemplate = async (text = '') => {
   document.getElementById("animation").style.display = "block";
-  const uri = 'http://localhost:3000/conversation/';
+  //const uri = 'http://localhost:3000/conversation/';
+  const uri = 'http://chatbot-cheerful-antelope.mybluemix.net/conversation/'
 
   const response = await (await fetch(uri, {
     method: 'POST',

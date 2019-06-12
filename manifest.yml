@@ -1,0 +1,9 @@
+applications:
+- name: chatbot
+  random-route: true
+  command: node app.js
+  path: .
+  memory: 256M
+  instances: 1
+  env:
+    NPM_CONFIG_PRODUCTION: false
